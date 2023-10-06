@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #483c32;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nalinbankfx.InfoWindowController">
+   <children>
+      <Label layoutX="302.0" layoutY="14.0" prefHeight="42.0" prefWidth="256.0" text="Nalin's Bank" textFill="#ac8416">
+         <font>
+            <Font name="Onyx" size="83.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="99.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: #deb887;">
+         <children>
+            <Text layoutX="304.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="О ДАННОМ ПРИЛОЖЕНИИ">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="224.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Приложение разработано для того, чтобы сдать курсовой проект">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="242.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="И, поверьте, я очень старался, чтобы оно вам понравилось! " wrappingWidth="415.1513671875">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="183.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="За этот семестр многое было пройдено... И здесь я постарался это отобразить">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="407.0" layoutY="240.0">
+               <image>
+                  <Image url="@assets/infoButton.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="coinImage" fitHeight="65.0" fitWidth="42.0" layoutX="558.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/653278_coin_bitcoin_cash_currency_dollar_icon.png" />
+         </image>
+      </ImageView>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="150.0" style="-fx-background-color: #483c32;">
+         <children>
+            <Button fx:id="paymentsButton" layoutX="4.0" layoutY="163.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #423c63; -fx-border-color: #deb887; -fx-background-radius: 30; -fx-border-radius: 30;" text="Платежи" textFill="BURLYWOOD">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="currencyСonverterButton" layoutX="7.0" layoutY="206.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="136.0" style="-fx-background-color: #423c63; -fx-border-color: #deb887; -fx-background-radius: 30; -fx-border-radius: 30;" text="Конвертёр валют" textFill="BURLYWOOD">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="logBookButton" layoutX="4.0" layoutY="248.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #423c63; -fx-border-color: #deb887; -fx-background-radius: 30; -fx-border-radius: 30;" text="Журнал" textFill="BURLYWOOD">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="24.0" layoutY="14.0" prefHeight="53.0" prefWidth="118.0" text="Menu" textAlignment="CENTER" textFill="#ac8416">
+               <font>
+                  <Font name="Onyx" size="77.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="4.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #423c63; -fx-border-color: #deb887; -fx-background-radius: 30; -fx-border-radius: 30;" text="На главную" textFill="BURLYWOOD">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" layoutX="4.0" layoutY="351.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #423c63; -fx-border-color: #deb887; -fx-background-radius: 30; -fx-border-radius: 30;" text="Выход" textFill="BURLYWOOD">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="coinImage1" fitHeight="65.0" fitWidth="42.0" layoutX="253.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/653278_coin_bitcoin_cash_currency_dollar_icon.png" />
+         </image>
+      </ImageView>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+   </children>
+</AnchorPane>

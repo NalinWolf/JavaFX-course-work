@@ -1,0 +1,181 @@
+@startuml
+class com.example.nalinbankfx.logBook {
+- int id
+- String name
++ int getId()
++ void setId(int)
++ String getName()
++ void setName(String)
+}
+class com.example.nalinbankfx.InitializationWindowController {
+~ {static} User selectedUser
+- ResourceBundle resources
+- URL location
+- Button authSignInButton
+- Button loginSignUpButton
+- TextField login_field
+- TextField password_field
+~ void initialize()
+- void loginUser(String,String)
+}
+class com.example.nalinbankfx.Metods {
+~ {static} void openNewScene(String)
+}
+class com.example.nalinbankfx.MainWindowController {
+- ResourceBundle resources
+- URL location
+- Button currencyСonverterButton
+- Button infoButton
+- Button logBookButton
+- Button newsButton
+- Button paymentsButton
+- TextField info
+~ void initialize()
+}
+class com.example.nalinbankfx.LogBookWindowController {
+- ResourceBundle resources
+- URL location
+- Button backButton
+- ImageView coinImage
+- ImageView coinImage1
+- Button currencyСonverterButton
+- Button exitButton
+- Button infoButton
+- Button newsButton
+- TableColumn<logBook,String> paymentColumn
+- TableColumn<logBook,Integer> id
+- TableView<logBook> table
+- Button paymentsButton
+- Button payButton
+- TextField sumField
+~ ObservableList<logBook> logList
+~ void initialize()
++ void updateTable()
+}
+class com.example.nalinbankfx.InfoWindowController {
+- ResourceBundle resources
+- URL location
+- Button backButton
+- ImageView coinImage
+- ImageView coinImage1
+- Button currencyСonverterButton
+- Button exitButton
+- Button logBookButton
+- Button newsButton
+- Button paymentsButton
+~ void initialize()
+}
+class com.example.nalinbankfx.HelloApplication {
++ void start(Stage)
++ {static} void main(String[])
+}
+class com.example.nalinbankfx.currencyConverterWindowController {
+- ResourceBundle resources
+- URL location
+- Button backButton
+- ImageView coinImage
+- ImageView coinImage1
+- Button converterButton
+- ComboBox<String> currency1
+- ComboBox<String> currency2
+- Button exitButton
+- Button infoButton
+- Button logBookButton
+- Button newsButton
+- Button paymentsButton
+- TextField value1
+- TextField value2
+~ ObservableList<String> text
+~ void initialize()
+}
+class com.example.nalinbankfx.NewsWindowController {
+- ResourceBundle resources
+- URL location
+- Button backButton
+- ImageView coinImage
+- ImageView coinImage1
+- Button currencyСonverterButton
+- Button exitButton
+- Button infoButton
+- Button logBookButton
+- Button paymentsButton
+~ void initialize()
+}
+class com.example.nalinbankfx.DatabaseHandler {
+~ Connection dbConnection
++ Connection getDbConnection()
++ void signUpUser(User)
++ ResultSet getUser(User)
++ ResultSet getLog()
++ void createEvent(logBook,User,Double)
+}
+class com.example.nalinbankfx.User {
+- String firstname
+- String lastName
+- String userName
+- String password
+- String mail
+- String gender
++ String getFirstname()
++ void setFirstname(String)
++ String getLastName()
++ void setLastName(String)
++ String getUserName()
++ void setUserName(String)
++ String getPassword()
++ void setPassword(String)
++ String getMail()
++ void setMail(String)
++ String getGender()
++ void setGender(String)
+}
+class com.example.nalinbankfx.PaymentsWindowController {
+- ResourceBundle resources
+- URL location
+- Button backButton
+- ImageView coinImage
+- ImageView coinImage1
+- Button currencyСonverterButton
+- Button exitButton
+- Button infoButton
+- Button logBookButton
+- Button newsButton
+~ void initialize()
+}
+class com.example.nalinbankfx.Configs {
+# String dbHost
+# String dbPort
+# String dbUser
+# String dbPass
+# String dbName
+}
+class com.example.nalinbankfx.RegistrationWindowController {
+- ResourceBundle resources
+- URL location
+- Button regButton
+- CheckBox regCheckBoxFemale
+- CheckBox regCheckBoxMale
+- TextField regLogin
+- TextField regMail
+- TextField regName
+- TextField regPassword
+- TextField regSurname
+~ void initialize()
+- void signUpNewUser()
+}
+class com.example.nalinbankfx.Const {
++ {static} String USER_TABLE
++ {static} String USERS_ID
++ {static} String USERS_USERNAME
++ {static} String USER_BALANCE
++ {static} String USERS_PASSWORD
++ {static} String USERS_MAIL
++ {static} String USERS_FIRSTNAME
++ {static} String USERS_LASTNAME
++ {static} String USERS_GENDER
+}
+
+
+javafx.application.Application <|-- com.example.nalinbankfx.HelloApplication
+com.example.nalinbankfx.Configs <|-- com.example.nalinbankfx.DatabaseHandler
+@enduml
